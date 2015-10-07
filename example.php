@@ -1,7 +1,6 @@
-# PayStation-PHP-Wrapper
-A PHP wrapper to use the New Zealand based payment Gateway Paystation. 
+<?php
 
-## Example config settings.
+            // Example config settings.
             define('PAYSTATION_ACCOUNT_ID', 123456);
             define('PAYSTATION_GATEWAY_ID', 'PAYSTATION');
 
@@ -20,7 +19,10 @@ A PHP wrapper to use the New Zealand based payment Gateway Paystation.
             }
 
 
-## Example method to capture a card token.
+
+
+
+            // Example method to capture a card token.
             $payment_reference = 'my payment/account/order identifier';
 
             if($response = $paystation->getToken($payment_reference)) {
@@ -43,7 +45,11 @@ A PHP wrapper to use the New Zealand based payment Gateway Paystation.
 
             }
 
-## Process the result (process_payment.php)
+
+
+
+
+            // process_payment.php
             if(isset($_REQUEST['ms'])) {
 
                 if($_REQUEST['ec'] == 0) {
@@ -65,9 +71,7 @@ A PHP wrapper to use the New Zealand based payment Gateway Paystation.
 
 
 
-
-
-## How to charge a card using a token.
+            // how to charge a card using a token.
             // Reference.
             $payment_reference = 'my payment/account/order identifier';
 
